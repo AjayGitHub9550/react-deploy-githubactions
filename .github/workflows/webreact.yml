@@ -1,4 +1,4 @@
-name: Node.js CI/CD-AWS-deploy
+name: Ajay-try
 
 on:
   push:
@@ -46,7 +46,7 @@ jobs:
         eval $(ssh-agent -s)
         chmod 600 private_key.pem 
         ssh-add private_key.pem
-        ssh -i private_key.pem ubuntu@65.0.26.243
+        ssh -i private_key.pem ubuntu@54.226.63.95
         sudo mkdir -p /var/www/react-app
         ssh -o StrictHostKeyChecking=no -i private_key.pem ubuntu@$EC2_IP "sudo chown -R ubuntu:ubuntu /var/www/react-app"
 
